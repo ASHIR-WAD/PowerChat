@@ -78,6 +78,9 @@ def ask_powercast_bot(user_question: str) -> str:
     return response.text.strip()
 
 # === ROUTES ===
+@app.route('/',methods=['GET','POST'])
+def home():
+    return "chat bot is up :)"
 
 @app.route('/ask', methods=['POST'])
 def ask():
